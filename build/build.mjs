@@ -14,6 +14,9 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
+import genIterm from "../generators/iterm.mjs";
+import genZed from "../generators/zed.mjs";
+import genNeovim from "../generators/neovim.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
@@ -303,7 +306,24 @@ function renderPreview(slug) {
 mkdirSync(resolve(root, "preview"), { recursive: true });
 for (const slug of themeSlugs) writeFileSync(resolve(root, "preview", fileFor(slug)), renderPreview(slug));
 
+// --- target generators (iterm / zed / nvim) --------------------------------
+const genData = { meta: palette.meta, themes: resolvedThemes };
+const targets = [
+  ["iTerm2", genIterm],
+  ["Zed", genZed],
+  ["Neovim", genNeovim],
+];
+const written = [];
+for (const [, gen] of targets)
+  for (const { file, content } of gen(genData)) {
+    const out = resolve(root, "dist", file);
+    mkdirSync(dirname(out), { recursive: true });
+    writeFileSync(out, content);
+    written.push("dist/" + file);
+  }
+
 console.log("✓ dist/tokens.css        (" + themeSlugs.join(", ") + ")");
 console.log("✓ dist/tokens.resolved.json");
 console.log("✓ dist/fonts.css");
 console.log("✓ preview/" + themeSlugs.map(fileFor).join(", preview/"));
+for (const w of written) console.log("✓ " + w);
