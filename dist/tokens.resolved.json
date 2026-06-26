@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "name": "Ghostly RVN",
+    "theme": "Spectre",
+    "version": "0.1.0",
+    "description": "A 90s-anime cyberpunk aesthetic. Cool-anchored: cyan, teal and violet glowing over a blue-black void, cut with hot HUD accents (magenta, amber, red) for that anime warning-light pop.",
+    "influences": [
+      "Neon Genesis Evangelion",
+      "Akira",
+      "Ghost in the Shell",
+      "Cowboy Bebop",
+      "Nier: Automata",
+      "Stellar Blade",
+      "P.N.03",
+      "Starfield / No Man's Sky futurism"
+    ],
+    "author": "ghostlyrvn"
+  },
+  "semantic": {
+    "bg.void": "#070a10",
+    "bg.deep": "#0b0f17",
+    "bg.base": "#0f1420",
+    "bg.surface": "#141b2b",
+    "bg.overlay": "#1c2438",
+    "bg.raised": "#283350",
+    "fg.bright": "#eef2ff",
+    "fg.default": "#d6def0",
+    "fg.muted": "#8794b0",
+    "fg.faint": "#44506e",
+    "accent.primary": "#38e1c8",
+    "accent.primary-bright": "#6ff0dc",
+    "accent.secondary": "#a07cff",
+    "accent.tertiary": "#4d8dff",
+    "accent.hot": "#f0529c",
+    "border.default": "#283350",
+    "border.muted": "#1c2438",
+    "border.accent": "#22b8c4",
+    "signal.success": "#7ddb5a",
+    "signal.warning": "#ffb454",
+    "signal.danger": "#ff5277",
+    "signal.info": "#74a8ff",
+    "signal.special": "#f0529c"
+  },
+  "syntax": {
+    "comment": "#44506e",
+    "keyword": "#a07cff",
+    "storage": "#bfa0ff",
+    "string": "#7ddb5a",
+    "string.escape": "#6ff0dc",
+    "number": "#ffb454",
+    "boolean": "#ffd27d",
+    "constant": "#ff7ab0",
+    "function": "#38e1c8",
+    "method": "#6ff0dc",
+    "type": "#74a8ff",
+    "class": "#74a8ff",
+    "variable": "#d6def0",
+    "property": "#b3bdd6",
+    "parameter": "#ff7ab0",
+    "operator": "#8794b0",
+    "punctuation": "#8794b0",
+    "tag": "#f0529c",
+    "attribute": "#ffb454",
+    "regex": "#9fe85b"
+  },
+  "ansi": {
+    "black": "#1c2438",
+    "red": "#ff5277",
+    "green": "#7ddb5a",
+    "yellow": "#ffb454",
+    "blue": "#4d8dff",
+    "magenta": "#a07cff",
+    "cyan": "#38e1c8",
+    "white": "#d6def0",
+    "brightBlack": "#44506e",
+    "brightRed": "#ff7a96",
+    "brightGreen": "#9fe85b",
+    "brightYellow": "#ffd27d",
+    "brightBlue": "#74a8ff",
+    "brightMagenta": "#bfa0ff",
+    "brightCyan": "#6ff0dc",
+    "brightWhite": "#eef2ff",
+    "background": "#0f1420",
+    "foreground": "#d6def0",
+    "cursor": "#38e1c8",
+    "selection": "#3b6fe0"
+  },
+  "typography": {
+    "font.mono": "\"Monaspace Neon\", ui-monospace, \"SFMono-Regular\", monospace",
+    "font.display": "\"Monaspace Krypton\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.sans": "\"Monaspace Argon\", ui-monospace, monospace",
+    "font.slab": "\"Monaspace Xenon\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.hand": "\"Monaspace Radon\", \"Monaspace Neon\", ui-monospace, monospace"
+  },
+  "radius": {
+    "none": "0px",
+    "sm": "2px",
+    "md": "4px",
+    "lg": "8px"
+  },
+  "ref": {
+    "ink": {
+      "600": "#283350",
+      "700": "#1c2438",
+      "800": "#141b2b",
+      "850": "#0f1420",
+      "900": "#0b0f17",
+      "950": "#070a10"
+    },
+    "slate": {
+      "50": "#eef2ff",
+      "100": "#d6def0",
+      "200": "#b3bdd6",
+      "300": "#8794b0",
+      "400": "#5d6b8c",
+      "500": "#44506e"
+    },
+    "cyan": {
+      "400": "#6ff0dc",
+      "500": "#38e1c8",
+      "600": "#22b8c4"
+    },
+    "blue": {
+      "400": "#74a8ff",
+      "500": "#4d8dff",
+      "600": "#3b6fe0"
+    },
+    "violet": {
+      "400": "#bfa0ff",
+      "500": "#a07cff",
+      "600": "#7c5cde"
+    },
+    "magenta": {
+      "400": "#ff7ab0",
+      "500": "#f0529c",
+      "600": "#d6357f"
+    },
+    "amber": {
+      "400": "#ffd27d",
+      "500": "#ffb454",
+      "600": "#ff9e3d"
+    },
+    "red": {
+      "400": "#ff7a96",
+      "500": "#ff5277",
+      "600": "#e83b62"
+    },
+    "green": {
+      "400": "#9fe85b",
+      "500": "#7ddb5a",
+      "600": "#57c04a"
+    }
+  }
+}

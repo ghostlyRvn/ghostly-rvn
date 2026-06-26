@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "name": "Ghostly RVN",
+    "theme": "Spectre",
+    "version": "0.1.0",
+    "description": "A 90s-anime cyberpunk aesthetic. Cool-anchored: cyan, teal and violet glowing over a blue-black void, cut with hot HUD accents (magenta, amber, red) for that anime warning-light pop.",
+    "influences": [
+      "Neon Genesis Evangelion",
+      "Akira",
+      "Ghost in the Shell",
+      "Cowboy Bebop",
+      "Nier: Automata",
+      "Stellar Blade",
+      "P.N.03",
+      "Starfield / No Man's Sky futurism"
+    ],
+    "author": "ghostlyrvn"
+  },
+
+  "ref": {
+    "ink": {
+      "950": "#070a10",
+      "900": "#0b0f17",
+      "850": "#0f1420",
+      "800": "#141b2b",
+      "700": "#1c2438",
+      "600": "#283350"
+    },
+    "slate": {
+      "500": "#44506e",
+      "400": "#5d6b8c",
+      "300": "#8794b0",
+      "200": "#b3bdd6",
+      "100": "#d6def0",
+      "50":  "#eef2ff"
+    },
+    "cyan": {
+      "600": "#22b8c4",
+      "500": "#38e1c8",
+      "400": "#6ff0dc"
+    },
+    "blue": {
+      "600": "#3b6fe0",
+      "500": "#4d8dff",
+      "400": "#74a8ff"
+    },
+    "violet": {
+      "600": "#7c5cde",
+      "500": "#a07cff",
+      "400": "#bfa0ff"
+    },
+    "magenta": {
+      "600": "#d6357f",
+      "500": "#f0529c",
+      "400": "#ff7ab0"
+    },
+    "amber": {
+      "600": "#ff9e3d",
+      "500": "#ffb454",
+      "400": "#ffd27d"
+    },
+    "red": {
+      "600": "#e83b62",
+      "500": "#ff5277",
+      "400": "#ff7a96"
+    },
+    "green": {
+      "600": "#57c04a",
+      "500": "#7ddb5a",
+      "400": "#9fe85b"
+    }
+  },
+
+  "semantic": {
+    "bg.void":        "ink.950",
+    "bg.deep":        "ink.900",
+    "bg.base":        "ink.850",
+    "bg.surface":     "ink.800",
+    "bg.overlay":     "ink.700",
+    "bg.raised":      "ink.600",
+
+    "fg.bright":      "slate.50",
+    "fg.default":     "slate.100",
+    "fg.muted":       "slate.300",
+    "fg.faint":       "slate.500",
+
+    "accent.primary":        "cyan.500",
+    "accent.primary-bright":  "cyan.400",
+    "accent.secondary":      "violet.500",
+    "accent.tertiary":       "blue.500",
+    "accent.hot":            "magenta.500",
+
+    "border.default": "ink.600",
+    "border.muted":   "ink.700",
+    "border.accent":  "cyan.600",
+
+    "signal.success": "green.500",
+    "signal.warning": "amber.500",
+    "signal.danger":  "red.500",
+    "signal.info":    "blue.400",
+    "signal.special": "magenta.500"
+  },
+
+  "syntax": {
+    "comment":        "slate.500",
+    "keyword":        "violet.500",
+    "storage":        "violet.400",
+    "string":         "green.500",
+    "string.escape":  "cyan.400",
+    "number":         "amber.500",
+    "boolean":        "amber.400",
+    "constant":       "magenta.400",
+    "function":       "cyan.500",
+    "method":         "cyan.400",
+    "type":           "blue.400",
+    "class":          "blue.400",
+    "variable":       "slate.100",
+    "property":       "slate.200",
+    "parameter":      "magenta.400",
+    "operator":       "slate.300",
+    "punctuation":    "slate.300",
+    "tag":            "magenta.500",
+    "attribute":      "amber.500",
+    "regex":          "green.400"
+  },
+
+  "ansi": {
+    "black":         "ink.700",
+    "red":           "red.500",
+    "green":         "green.500",
+    "yellow":        "amber.500",
+    "blue":          "blue.500",
+    "magenta":       "violet.500",
+    "cyan":          "cyan.500",
+    "white":         "slate.100",
+    "brightBlack":   "slate.500",
+    "brightRed":     "red.400",
+    "brightGreen":   "green.400",
+    "brightYellow":  "amber.400",
+    "brightBlue":    "blue.400",
+    "brightMagenta": "violet.400",
+    "brightCyan":    "cyan.400",
+    "brightWhite":   "slate.50",
+    "background":    "ink.850",
+    "foreground":    "slate.100",
+    "cursor":        "cyan.500",
+    "selection":     "blue.600"
+  },
+
+  "typography": {
+    "font.mono":    "\"Monaspace Neon\", ui-monospace, \"SFMono-Regular\", monospace",
+    "font.display": "\"Monaspace Krypton\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.sans":    "\"Monaspace Argon\", ui-monospace, monospace",
+    "font.slab":    "\"Monaspace Xenon\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.hand":    "\"Monaspace Radon\", \"Monaspace Neon\", ui-monospace, monospace"
+  },
+
+  "fonts": [
+    { "family": "Monaspace Neon",    "slug": "neon",    "role": "mono / code / terminal" },
+    { "family": "Monaspace Krypton", "slug": "krypton", "role": "display / HUD headings" },
+    { "family": "Monaspace Argon",   "slug": "argon",   "role": "sans / UI / body" },
+    { "family": "Monaspace Xenon",   "slug": "xenon",   "role": "slab / quotes / emphasis" },
+    { "family": "Monaspace Radon",   "slug": "radon",   "role": "hand / accents" }
+  ],
+
+  "radius": {
+    "none": "0px",
+    "sm":   "2px",
+    "md":   "4px",
+    "lg":   "8px"
+  }
+}

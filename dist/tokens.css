@@ -1,0 +1,120 @@
+:root {
+  /* Ghostly RVN — generated from tokens/palette.json. Do not edit by hand. */
+
+  /* reference ramps */
+  --gh-ink-600: #283350;
+  --gh-ink-700: #1c2438;
+  --gh-ink-800: #141b2b;
+  --gh-ink-850: #0f1420;
+  --gh-ink-900: #0b0f17;
+  --gh-ink-950: #070a10;
+  --gh-slate-50: #eef2ff;
+  --gh-slate-100: #d6def0;
+  --gh-slate-200: #b3bdd6;
+  --gh-slate-300: #8794b0;
+  --gh-slate-400: #5d6b8c;
+  --gh-slate-500: #44506e;
+  --gh-cyan-400: #6ff0dc;
+  --gh-cyan-500: #38e1c8;
+  --gh-cyan-600: #22b8c4;
+  --gh-blue-400: #74a8ff;
+  --gh-blue-500: #4d8dff;
+  --gh-blue-600: #3b6fe0;
+  --gh-violet-400: #bfa0ff;
+  --gh-violet-500: #a07cff;
+  --gh-violet-600: #7c5cde;
+  --gh-magenta-400: #ff7ab0;
+  --gh-magenta-500: #f0529c;
+  --gh-magenta-600: #d6357f;
+  --gh-amber-400: #ffd27d;
+  --gh-amber-500: #ffb454;
+  --gh-amber-600: #ff9e3d;
+  --gh-red-400: #ff7a96;
+  --gh-red-500: #ff5277;
+  --gh-red-600: #e83b62;
+  --gh-green-400: #9fe85b;
+  --gh-green-500: #7ddb5a;
+  --gh-green-600: #57c04a;
+
+  /* semantic */
+  --gh-bg-void: #070a10;
+  --gh-bg-deep: #0b0f17;
+  --gh-bg-base: #0f1420;
+  --gh-bg-surface: #141b2b;
+  --gh-bg-overlay: #1c2438;
+  --gh-bg-raised: #283350;
+  --gh-fg-bright: #eef2ff;
+  --gh-fg-default: #d6def0;
+  --gh-fg-muted: #8794b0;
+  --gh-fg-faint: #44506e;
+  --gh-accent-primary: #38e1c8;
+  --gh-accent-primary-bright: #6ff0dc;
+  --gh-accent-secondary: #a07cff;
+  --gh-accent-tertiary: #4d8dff;
+  --gh-accent-hot: #f0529c;
+  --gh-border-default: #283350;
+  --gh-border-muted: #1c2438;
+  --gh-border-accent: #22b8c4;
+  --gh-signal-success: #7ddb5a;
+  --gh-signal-warning: #ffb454;
+  --gh-signal-danger: #ff5277;
+  --gh-signal-info: #74a8ff;
+  --gh-signal-special: #f0529c;
+
+  /* syntax */
+  --gh-comment: #44506e;
+  --gh-keyword: #a07cff;
+  --gh-storage: #bfa0ff;
+  --gh-string: #7ddb5a;
+  --gh-string-escape: #6ff0dc;
+  --gh-number: #ffb454;
+  --gh-boolean: #ffd27d;
+  --gh-constant: #ff7ab0;
+  --gh-function: #38e1c8;
+  --gh-method: #6ff0dc;
+  --gh-type: #74a8ff;
+  --gh-class: #74a8ff;
+  --gh-variable: #d6def0;
+  --gh-property: #b3bdd6;
+  --gh-parameter: #ff7ab0;
+  --gh-operator: #8794b0;
+  --gh-punctuation: #8794b0;
+  --gh-tag: #f0529c;
+  --gh-attribute: #ffb454;
+  --gh-regex: #9fe85b;
+
+  /* ansi */
+  --gh-black: #1c2438;
+  --gh-red: #ff5277;
+  --gh-green: #7ddb5a;
+  --gh-yellow: #ffb454;
+  --gh-blue: #4d8dff;
+  --gh-magenta: #a07cff;
+  --gh-cyan: #38e1c8;
+  --gh-white: #d6def0;
+  --gh-brightBlack: #44506e;
+  --gh-brightRed: #ff7a96;
+  --gh-brightGreen: #9fe85b;
+  --gh-brightYellow: #ffd27d;
+  --gh-brightBlue: #74a8ff;
+  --gh-brightMagenta: #bfa0ff;
+  --gh-brightCyan: #6ff0dc;
+  --gh-brightWhite: #eef2ff;
+  --gh-background: #0f1420;
+  --gh-foreground: #d6def0;
+  --gh-cursor: #38e1c8;
+  --gh-selection: #3b6fe0;
+
+  /* typography */
+  --gh-font-mono: "Monaspace Neon", ui-monospace, "SFMono-Regular", monospace;
+  --gh-font-display: "Monaspace Krypton", "Monaspace Neon", ui-monospace, monospace;
+  --gh-font-sans: "Monaspace Argon", ui-monospace, monospace;
+  --gh-font-slab: "Monaspace Xenon", "Monaspace Neon", ui-monospace, monospace;
+  --gh-font-hand: "Monaspace Radon", "Monaspace Neon", ui-monospace, monospace;
+
+  /* radius */
+  --gh-radius-none: 0px;
+  --gh-radius-sm: 2px;
+  --gh-radius-md: 4px;
+  --gh-radius-lg: 8px;
+}
