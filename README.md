@@ -1,11 +1,14 @@
 # Ghostly RVN
 
-A personal visual system — **90s-anime cyberpunk**. Cool-anchored (cyan, teal,
-violet glowing over a blue-black void) cut with hot HUD accents (magenta, amber,
-red). Influences: *Evangelion · Akira · Ghost in the Shell · Cowboy Bebop ·
-Nier: Automata · Stellar Blade*.
+A personal visual system — **90s-anime science fiction**. Futurism and
+retro-futurism first, with a cyberpunk undercurrent: cel-painted dusk skylines,
+neon haze and chrome, in soft-but-saturated color. Influences: *Evangelion ·
+Akira · Ghost in the Shell · Cowboy Bebop · Sailor Moon · Nier: Automata ·
+Stellar Blade · Starfield · No Man's Sky*.
 
 One aesthetic, defined once, exported everywhere: terminal, editor, website.
+Planned as a trio of themes — **Spectre** (dark, shipping now), a Light theme,
+and a Warm/Amber theme — that share one token structure.
 
 ## How it works
 
