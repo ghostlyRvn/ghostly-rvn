@@ -148,10 +148,20 @@
   },
 
   "typography": {
-    "font.mono":    "\"Berkeley Mono\", \"JetBrains Mono\", \"SFMono-Regular\", ui-monospace, monospace",
-    "font.display": "\"Michroma\", \"Orbitron\", \"Rajdhani\", \"Eurostile\", sans-serif",
-    "font.sans":    "\"Inter\", \"Helvetica Neue\", system-ui, sans-serif"
+    "font.mono":    "\"Monaspace Neon\", ui-monospace, \"SFMono-Regular\", monospace",
+    "font.display": "\"Monaspace Krypton\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.sans":    "\"Monaspace Argon\", ui-monospace, monospace",
+    "font.slab":    "\"Monaspace Xenon\", \"Monaspace Neon\", ui-monospace, monospace",
+    "font.hand":    "\"Monaspace Radon\", \"Monaspace Neon\", ui-monospace, monospace"
   },
+
+  "fonts": [
+    { "family": "Monaspace Neon",    "slug": "neon",    "role": "mono / code / terminal" },
+    { "family": "Monaspace Krypton", "slug": "krypton", "role": "display / HUD headings" },
+    { "family": "Monaspace Argon",   "slug": "argon",   "role": "sans / UI / body" },
+    { "family": "Monaspace Xenon",   "slug": "xenon",   "role": "slab / quotes / emphasis" },
+    { "family": "Monaspace Radon",   "slug": "radon",   "role": "hand / accents" }
+  ],
 
   "radius": {
     "none": "0px",

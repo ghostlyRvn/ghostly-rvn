@@ -71,6 +71,27 @@ mkdirSync(resolve(root, "dist"), { recursive: true });
 writeFileSync(resolve(root, "dist/tokens.css"), lines.join("\n") + "\n");
 writeFileSync(resolve(root, "dist/tokens.resolved.json"), JSON.stringify(resolved, null, 2) + "\n");
 
+// --- emit dist/fonts.css (self-hosted Monaspace @font-face) -----------------
+// Fonts are vendored under assets/fonts/ — url() is resolved relative to this
+// stylesheet's location (dist/), so ../assets/fonts/ lands in the repo root.
+const fontFaces = (palette.fonts ?? [])
+  .flatMap((f) =>
+    [400, 700].map(
+      (w) => `@font-face {
+  font-family: "${f.family}";
+  font-style: normal;
+  font-weight: ${w};
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-${f.slug}-${w}.woff2") format("woff2");
+}`
+    )
+  )
+  .join("\n");
+writeFileSync(
+  resolve(root, "dist/fonts.css"),
+  `/* Ghostly RVN — Monaspace @font-face. Generated from tokens/palette.json. Do not edit by hand. */\n${fontFaces}\n`
+);
+
 // --- emit preview/index.html ------------------------------------------------
 const swatch = (label, hex) => `
   <div class="swatch">
@@ -96,9 +117,8 @@ const html = `<!DOCTYPE html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>${palette.meta.name} — ${palette.meta.theme}</title>
+<link rel="stylesheet" href="../dist/fonts.css" />
 <link rel="stylesheet" href="../dist/tokens.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
   body {
@@ -176,6 +196,14 @@ const html = `<!DOCTYPE html>
   .pill.w { background: rgba(255,180,84,.14); color: var(--gh-signal-warning); border:1px solid var(--gh-signal-warning); }
   .pill.d { background: rgba(255,82,119,.14); color: var(--gh-signal-danger); border:1px solid var(--gh-signal-danger); }
 
+  .type-specimens { display: grid; gap: 12px; }
+  .specimen { background: var(--gh-bg-base); border: 1px solid var(--gh-border-default); border-radius: var(--gh-radius-lg); padding: 20px 22px; }
+  .spec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+  .spec-name { font-family: var(--gh-font-mono); font-size: 13px; color: var(--gh-accent-primary); letter-spacing: .12em; text-transform: uppercase; }
+  .spec-role { font-family: var(--gh-font-mono); font-size: 11px; color: var(--gh-fg-faint); }
+  .spec-big { font-size: 38px; color: var(--gh-fg-bright); line-height: 1.1; }
+  .spec-line { margin-top: 8px; font-size: 14px; color: var(--gh-fg-muted); }
+
   footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--gh-border-default); font-family: var(--gh-font-mono); font-size: 11px; color: var(--gh-fg-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;}
 </style>
 </head>
@@ -221,6 +249,16 @@ const html = `<!DOCTYPE html>
 <span class="err">✗</span> 0 errors
 <span class="p">rvn</span> <span class="u">λ</span> <span class="cursor">&nbsp;</span></div>
     </div>
+  </div>
+
+  <h2>Typeface · Monaspace</h2>
+  <div class="type-specimens">
+    ${(palette.fonts ?? []).map((f) => `
+    <div class="specimen" style="font-family: '${f.family}', ui-monospace, monospace">
+      <div class="spec-head"><span class="spec-name">${f.family.replace("Monaspace ", "")}</span><span class="spec-role">${f.role}</span></div>
+      <div class="spec-big">Ghostly RVN — Spectre</div>
+      <div class="spec-line">ABCDEFGHIJKLM abcdefghijklm 0123456789 &nbsp; =&gt; != -&gt; &lt;= λ {} [] () /* ⟶ */</div>
+    </div>`).join("")}
   </div>
 
   <h2>Terminal · ANSI 16</h2>

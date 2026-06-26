@@ -106,9 +106,11 @@
   --gh-selection: #3b6fe0;
 
   /* typography */
-  --gh-font-mono: "Berkeley Mono", "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
-  --gh-font-display: "Michroma", "Orbitron", "Rajdhani", "Eurostile", sans-serif;
-  --gh-font-sans: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --gh-font-mono: "Monaspace Neon", ui-monospace, "SFMono-Regular", monospace;
+  --gh-font-display: "Monaspace Krypton", "Monaspace Neon", ui-monospace, monospace;
+  --gh-font-sans: "Monaspace Argon", ui-monospace, monospace;
+  --gh-font-slab: "Monaspace Xenon", "Monaspace Neon", ui-monospace, monospace;
+  --gh-font-hand: "Monaspace Radon", "Monaspace Neon", ui-monospace, monospace;
 
   /* radius */
   --gh-radius-none: 0px;

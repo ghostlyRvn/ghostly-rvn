@@ -1,0 +1,71 @@
+/* Ghostly RVN — Monaspace @font-face. Generated from tokens/palette.json. Do not edit by hand. */
+@font-face {
+  font-family: "Monaspace Neon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-neon-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Neon";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-neon-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Krypton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-krypton-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Krypton";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-krypton-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Argon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-argon-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Argon";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-argon-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Xenon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-xenon-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Xenon";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-xenon-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Radon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-radon-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Monaspace Radon";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/monaspace-radon-700.woff2") format("woff2");
+}
