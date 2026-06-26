@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="spectre">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ghostly RVN — Projects</title>
+<script>try{var t=localStorage.getItem('gh-theme');if(['spectre','halo','ember'].indexOf(t)>=0)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="../dist/fonts.css" />
+<link rel="stylesheet" href="../dist/tokens.css" />
+<link rel="stylesheet" href="site.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">Ghostly <b>RVN</b></a>
+    <nav class="nav">
+      <a href="index.html">Index</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+    </nav>
+    <div class="theme-picker" role="group" aria-label="Theme">
+      <span class="label">Theme</span>
+      <button class="theme-btn" data-theme-btn="spectre" type="button"><span class="dot"></span>Spectre</button>
+      <button class="theme-btn" data-theme-btn="halo" type="button"><span class="dot"></span>Halo</button>
+      <button class="theme-btn" data-theme-btn="ember" type="button"><span class="dot"></span>Ember</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" style="padding:56px 0 32px">
+    <div class="eyebrow">Component Showcase</div>
+    <h1>The kitchen sink</h1>
+    <p class="lede">Common HTML, well-formed, in nonsense text — so you can flip between
+    <strong>Spectre</strong>, <strong>Halo</strong> and <strong>Ember</strong> with the buttons above
+    and watch every component re-theme from the same tokens.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Typography</h2><span class="tag">// text</span></div>
+    <h3>Heading level three</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, with an <a href="#">inline link</a>,
+    some <code>inline_code()</code>, and a keyboard hint like <kbd>⌘</kbd> <kbd>K</kbd>.</p>
+    <h4>Heading level four</h4>
+    <p class="muted">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    <blockquote>
+      The city at dusk is just a palette that forgot to resolve.
+      <cite>— Anonymous, probably</cite>
+    </blockquote>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Buttons &amp; badges</h2><span class="tag">// actions</span></div>
+    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px">
+      <button class="btn primary" type="button">Primary</button>
+      <button class="btn ghost" type="button">Ghost</button>
+      <button class="btn hot" type="button">Override</button>
+      <button class="btn ghost disabled" type="button" disabled>Disabled</button>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="pill s">synced</span>
+      <span class="pill i">building</span>
+      <span class="pill w">drift</span>
+      <span class="pill d">offline</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Cards</h2><span class="tag">// grid</span></div>
+    <div class="grid cols-3">
+      <article class="card"><div class="meta">// 01</div><h3>Aurora</h3><p class="muted">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p><a href="#">open →</a></article>
+      <article class="card"><div class="meta">// 02</div><h3>Bastion</h3><p class="muted">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p><a href="#">open →</a></article>
+      <article class="card"><div class="meta">// 03</div><h3>Cinder</h3><p class="muted">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.</p><a href="#">open →</a></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Callouts</h2><span class="tag">// status</span></div>
+    <div class="callout info"><span class="icon">i</span><div><strong>Heads up.</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div></div>
+    <div class="callout ok"><span class="icon">✓</span><div><strong>Success.</strong> Laboris nisi ut aliquip ex ea commodo consequat.</div></div>
+    <div class="callout warn"><span class="icon">!</span><div><strong>Careful.</strong> Duis aute irure dolor in reprehenderit in voluptate.</div></div>
+    <div class="callout danger"><span class="icon">✗</span><div><strong>Error.</strong> Excepteur sint occaecat cupidatat non proident sunt.</div></div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Form</h2><span class="tag">// input</span></div>
+    <div class="grid cols-2">
+      <form onsubmit="return false">
+        <div class="field"><label for="n">Name</label><input id="n" type="text" placeholder="Rei Ayanami" /></div>
+        <div class="field"><label for="e">Email</label><input id="e" type="email" placeholder="rvn@nerv.jp" /></div>
+        <div class="field"><label for="t">Theme</label>
+          <select id="t"><option>Spectre</option><option>Halo</option><option>Ember</option></select>
+        </div>
+        <div class="field"><label for="m">Message</label><textarea id="m" placeholder="Nonsense, but well-formed…"></textarea></div>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+      <div>
+        <div class="checkline"><input type="checkbox" id="c1" checked /><label for="c1">Ship dark theme</label></div>
+        <div class="checkline"><input type="checkbox" id="c2" /><label for="c2">Ship light theme</label></div>
+        <div class="checkline"><input type="checkbox" id="c3" /><label for="c3">Ship warm theme</label></div>
+        <div style="height:14px"></div>
+        <div class="checkline"><input type="radio" name="r" id="r1" checked /><label for="r1">Cool accent</label></div>
+        <div class="checkline"><input type="radio" name="r" id="r2" /><label for="r2">Warm accent</label></div>
+        <div style="height:18px"></div>
+        <label>Build progress</label>
+        <div class="progress"><span style="width:72%"></span></div>
+        <div class="progress alt"><span style="width:38%"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Table</h2><span class="tag">// data</span></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Target</th><th>Theme</th><th>Format</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>iTerm2</td><td>Spectre</td><td><code>.itermcolors</code></td><td><span class="pill s">ok</span></td></tr>
+          <tr><td>Zed</td><td>Halo</td><td><code>.json</code></td><td><span class="pill s">ok</span></td></tr>
+          <tr><td>Neovim</td><td>Ember</td><td><code>.lua</code></td><td><span class="pill i">building</span></td></tr>
+          <tr><td>Web</td><td>All</td><td><code>.css</code></td><td><span class="pill w">draft</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Lists &amp; code</h2><span class="tag">// content</span></div>
+    <div class="grid cols-2">
+      <div>
+        <h4>Ordered</h4>
+        <ol><li>Resolve tokens.</li><li>Run the generators.</li><li>Ship every target.</li></ol>
+        <h4>Unordered</h4>
+        <ul><li>Spectre — cool dusk-dark.</li><li>Halo — cool daylight.</li><li>Ember — warm parchment.</li></ul>
+      </div>
+      <div>
+        <pre class="code"><span class="cmt">// generated, then rendered</span>
+<span class="kw">const</span> <span class="var">theme</span> <span class="pnc">=</span> <span class="fn">resolve</span><span class="pnc">(</span><span class="str">"ember"</span><span class="pnc">)</span><span class="pnc">;</span>
+<span class="kw">for</span> <span class="pnc">(</span><span class="kw">const</span> <span class="var">t</span> <span class="kw">of</span> <span class="var">targets</span><span class="pnc">)</span>
+  <span class="fn">emit</span><span class="pnc">(</span><span class="var">t</span><span class="pnc">,</span> <span class="var">theme</span><span class="pnc">,</span> <span class="num">0x1</span><span class="pnc">)</span><span class="pnc">;</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>Accents</h2><span class="tag">// proof</span></div>
+    <p class="muted">The same six roles, recolored per theme:</p>
+    <div class="swatches">
+      <span class="s" style="background:var(--gh-accent-primary)"></span>
+      <span class="s" style="background:var(--gh-accent-secondary)"></span>
+      <span class="s" style="background:var(--gh-accent-tertiary)"></span>
+      <span class="s" style="background:var(--gh-accent-hot)"></span>
+      <span class="s" style="background:var(--gh-signal-success)"></span>
+      <span class="s" style="background:var(--gh-signal-warning)"></span>
+      <span class="s" style="background:var(--gh-signal-danger)"></span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>Ghostly RVN · component showcase</span>
+    <span>every color is a --gh-* token</span>
+  </div>
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>
