@@ -1,20 +1,27 @@
 {
   "meta": {
     "name": "Ghostly RVN",
-    "theme": "Spectre",
-    "version": "0.1.0",
-    "description": "A 90s-anime cyberpunk aesthetic. Cool-anchored: cyan, teal and violet glowing over a blue-black void, cut with hot HUD accents (magenta, amber, red) for that anime warning-light pop.",
+    "version": "0.2.0",
+    "description": "A 90s-anime science-fiction aesthetic — futurism and retro-futurism first, with a cyberpunk undercurrent. Cel-painted dusk skylines, neon haze and chrome, rendered in soft-but-saturated color.",
     "influences": [
       "Neon Genesis Evangelion",
       "Akira",
       "Ghost in the Shell",
       "Cowboy Bebop",
+      "Sailor Moon",
       "Nier: Automata",
       "Stellar Blade",
       "P.N.03",
-      "Starfield / No Man's Sky futurism"
+      "Starfield",
+      "No Man's Sky"
     ],
-    "author": "ghostlyrvn"
+    "author": "ghostlyrvn",
+    "defaultTheme": "spectre",
+    "themes": [
+      { "slug": "spectre", "label": "Spectre", "appearance": "dark",  "blurb": "cool dusk-dark; cyan/violet over a blue-black void" },
+      { "slug": "halo",    "label": "Halo",    "appearance": "light", "blurb": "cool daylight; ink on cool mist with saturated accents" },
+      { "slug": "ember",   "label": "Ember",   "appearance": "light", "blurb": "warm parchment; amber-led with a cool teal counterpoint" }
+    ]
   },
 
   "ref": {
@@ -34,117 +41,304 @@
       "100": "#d6def0",
       "50":  "#eef2ff"
     },
+    "frost": {
+      "400": "#aebbd8",
+      "300": "#cfd9ee",
+      "200": "#e1e8f7",
+      "100": "#eef2fc",
+      "50":  "#f7f9ff"
+    },
+    "sand": {
+      "400": "#c6ad80",
+      "300": "#dcc9a4",
+      "200": "#ecdfc2",
+      "100": "#f6edd8",
+      "50":  "#fcf7ec"
+    },
+    "cocoa": {
+      "900": "#2a2017",
+      "700": "#4a3826",
+      "500": "#6f5640",
+      "400": "#917458"
+    },
     "cyan": {
+      "700": "#0f8a96",
       "600": "#22b8c4",
       "500": "#38e1c8",
       "400": "#6ff0dc"
     },
     "blue": {
+      "700": "#2553c0",
       "600": "#3b6fe0",
       "500": "#4d8dff",
       "400": "#74a8ff"
     },
     "violet": {
+      "700": "#5f3fc4",
       "600": "#7c5cde",
       "500": "#a07cff",
       "400": "#bfa0ff"
     },
     "magenta": {
+      "700": "#b81f6a",
       "600": "#d6357f",
       "500": "#f0529c",
       "400": "#ff7ab0"
     },
     "amber": {
+      "700": "#cf7a1c",
       "600": "#ff9e3d",
       "500": "#ffb454",
       "400": "#ffd27d"
     },
     "red": {
+      "700": "#cc2a4e",
       "600": "#e83b62",
       "500": "#ff5277",
       "400": "#ff7a96"
     },
     "green": {
+      "700": "#3f9a3a",
       "600": "#57c04a",
       "500": "#7ddb5a",
       "400": "#9fe85b"
     }
   },
 
-  "semantic": {
-    "bg.void":        "ink.950",
-    "bg.deep":        "ink.900",
-    "bg.base":        "ink.850",
-    "bg.surface":     "ink.800",
-    "bg.overlay":     "ink.700",
-    "bg.raised":      "ink.600",
+  "themes": {
+    "spectre": {
+      "label": "Spectre",
+      "appearance": "dark",
+      "semantic": {
+        "bg.void":        "ink.950",
+        "bg.deep":        "ink.900",
+        "bg.base":        "ink.850",
+        "bg.surface":     "ink.800",
+        "bg.overlay":     "ink.700",
+        "bg.raised":      "ink.600",
 
-    "fg.bright":      "slate.50",
-    "fg.default":     "slate.100",
-    "fg.muted":       "slate.300",
-    "fg.faint":       "slate.500",
+        "fg.bright":      "slate.50",
+        "fg.default":     "slate.100",
+        "fg.muted":       "slate.300",
+        "fg.faint":       "slate.500",
 
-    "accent.primary":        "cyan.500",
-    "accent.primary-bright":  "cyan.400",
-    "accent.secondary":      "violet.500",
-    "accent.tertiary":       "blue.500",
-    "accent.hot":            "magenta.500",
+        "accent.primary":        "cyan.500",
+        "accent.primary-bright": "cyan.400",
+        "accent.secondary":      "violet.500",
+        "accent.tertiary":       "blue.500",
+        "accent.hot":            "magenta.500",
 
-    "border.default": "ink.600",
-    "border.muted":   "ink.700",
-    "border.accent":  "cyan.600",
+        "border.default": "ink.600",
+        "border.muted":   "ink.700",
+        "border.accent":  "cyan.600",
 
-    "signal.success": "green.500",
-    "signal.warning": "amber.500",
-    "signal.danger":  "red.500",
-    "signal.info":    "blue.400",
-    "signal.special": "magenta.500"
-  },
+        "signal.success": "green.500",
+        "signal.warning": "amber.500",
+        "signal.danger":  "red.500",
+        "signal.info":    "blue.400",
+        "signal.special": "magenta.500"
+      },
+      "syntax": {
+        "comment":        "slate.500",
+        "keyword":        "violet.500",
+        "storage":        "violet.400",
+        "string":         "green.500",
+        "string.escape":  "cyan.400",
+        "number":         "amber.500",
+        "boolean":        "amber.400",
+        "constant":       "magenta.400",
+        "function":       "cyan.500",
+        "method":         "cyan.400",
+        "type":           "blue.400",
+        "class":          "blue.400",
+        "variable":       "slate.100",
+        "property":       "slate.200",
+        "parameter":      "magenta.400",
+        "operator":       "slate.300",
+        "punctuation":    "slate.300",
+        "tag":            "magenta.500",
+        "attribute":      "amber.500",
+        "regex":          "green.400"
+      },
+      "ansi": {
+        "black":         "ink.700",
+        "red":           "red.500",
+        "green":         "green.500",
+        "yellow":        "amber.500",
+        "blue":          "blue.500",
+        "magenta":       "violet.500",
+        "cyan":          "cyan.500",
+        "white":         "slate.100",
+        "brightBlack":   "slate.500",
+        "brightRed":     "red.400",
+        "brightGreen":   "green.400",
+        "brightYellow":  "amber.400",
+        "brightBlue":    "blue.400",
+        "brightMagenta": "violet.400",
+        "brightCyan":    "cyan.400",
+        "brightWhite":   "slate.50",
+        "background":    "ink.850",
+        "foreground":    "slate.100",
+        "cursor":        "cyan.500",
+        "selection":     "blue.600"
+      }
+    },
 
-  "syntax": {
-    "comment":        "slate.500",
-    "keyword":        "violet.500",
-    "storage":        "violet.400",
-    "string":         "green.500",
-    "string.escape":  "cyan.400",
-    "number":         "amber.500",
-    "boolean":        "amber.400",
-    "constant":       "magenta.400",
-    "function":       "cyan.500",
-    "method":         "cyan.400",
-    "type":           "blue.400",
-    "class":          "blue.400",
-    "variable":       "slate.100",
-    "property":       "slate.200",
-    "parameter":      "magenta.400",
-    "operator":       "slate.300",
-    "punctuation":    "slate.300",
-    "tag":            "magenta.500",
-    "attribute":      "amber.500",
-    "regex":          "green.400"
-  },
+    "halo": {
+      "label": "Halo",
+      "appearance": "light",
+      "semantic": {
+        "bg.void":        "frost.300",
+        "bg.deep":        "frost.200",
+        "bg.base":        "frost.100",
+        "bg.surface":     "frost.50",
+        "bg.overlay":     "frost.50",
+        "bg.raised":      "frost.50",
 
-  "ansi": {
-    "black":         "ink.700",
-    "red":           "red.500",
-    "green":         "green.500",
-    "yellow":        "amber.500",
-    "blue":          "blue.500",
-    "magenta":       "violet.500",
-    "cyan":          "cyan.500",
-    "white":         "slate.100",
-    "brightBlack":   "slate.500",
-    "brightRed":     "red.400",
-    "brightGreen":   "green.400",
-    "brightYellow":  "amber.400",
-    "brightBlue":    "blue.400",
-    "brightMagenta": "violet.400",
-    "brightCyan":    "cyan.400",
-    "brightWhite":   "slate.50",
-    "background":    "ink.850",
-    "foreground":    "slate.100",
-    "cursor":        "cyan.500",
-    "selection":     "blue.600"
+        "fg.bright":      "ink.850",
+        "fg.default":     "ink.700",
+        "fg.muted":       "slate.400",
+        "fg.faint":       "slate.300",
+
+        "accent.primary":        "cyan.700",
+        "accent.primary-bright": "cyan.600",
+        "accent.secondary":      "violet.700",
+        "accent.tertiary":       "blue.700",
+        "accent.hot":            "magenta.700",
+
+        "border.default": "frost.300",
+        "border.muted":   "frost.200",
+        "border.accent":  "cyan.600",
+
+        "signal.success": "green.700",
+        "signal.warning": "amber.700",
+        "signal.danger":  "red.700",
+        "signal.info":    "blue.700",
+        "signal.special": "magenta.700"
+      },
+      "syntax": {
+        "comment":        "slate.400",
+        "keyword":        "violet.700",
+        "storage":        "violet.600",
+        "string":         "green.700",
+        "string.escape":  "cyan.700",
+        "number":         "amber.700",
+        "boolean":        "amber.700",
+        "constant":       "magenta.700",
+        "function":       "blue.700",
+        "method":         "cyan.700",
+        "type":           "blue.600",
+        "class":          "blue.700",
+        "variable":       "ink.700",
+        "property":       "ink.600",
+        "parameter":      "magenta.700",
+        "operator":       "slate.400",
+        "punctuation":    "slate.400",
+        "tag":            "magenta.700",
+        "attribute":      "amber.700",
+        "regex":          "green.700"
+      },
+      "ansi": {
+        "black":         "ink.850",
+        "red":           "red.600",
+        "green":         "green.700",
+        "yellow":        "amber.700",
+        "blue":          "blue.700",
+        "magenta":       "violet.700",
+        "cyan":          "cyan.700",
+        "white":         "slate.300",
+        "brightBlack":   "slate.400",
+        "brightRed":     "red.500",
+        "brightGreen":   "green.600",
+        "brightYellow":  "amber.600",
+        "brightBlue":    "blue.600",
+        "brightMagenta": "violet.600",
+        "brightCyan":    "cyan.600",
+        "brightWhite":   "ink.700",
+        "background":    "frost.50",
+        "foreground":    "ink.700",
+        "cursor":        "cyan.700",
+        "selection":     "frost.300"
+      }
+    },
+
+    "ember": {
+      "label": "Ember",
+      "appearance": "light",
+      "semantic": {
+        "bg.void":        "sand.300",
+        "bg.deep":        "sand.200",
+        "bg.base":        "sand.100",
+        "bg.surface":     "sand.50",
+        "bg.overlay":     "sand.50",
+        "bg.raised":      "sand.50",
+
+        "fg.bright":      "cocoa.900",
+        "fg.default":     "cocoa.700",
+        "fg.muted":       "cocoa.500",
+        "fg.faint":       "cocoa.400",
+
+        "accent.primary":        "amber.700",
+        "accent.primary-bright": "amber.600",
+        "accent.secondary":      "cyan.700",
+        "accent.tertiary":       "red.700",
+        "accent.hot":            "magenta.700",
+
+        "border.default": "sand.300",
+        "border.muted":   "sand.200",
+        "border.accent":  "amber.600",
+
+        "signal.success": "green.700",
+        "signal.warning": "amber.700",
+        "signal.danger":  "red.700",
+        "signal.info":    "cyan.700",
+        "signal.special": "magenta.700"
+      },
+      "syntax": {
+        "comment":        "cocoa.400",
+        "keyword":        "red.700",
+        "storage":        "red.600",
+        "string":         "green.700",
+        "string.escape":  "cyan.700",
+        "number":         "amber.700",
+        "boolean":        "amber.700",
+        "constant":       "magenta.700",
+        "function":       "cyan.700",
+        "method":         "cyan.600",
+        "type":           "blue.700",
+        "class":          "blue.700",
+        "variable":       "cocoa.700",
+        "property":       "cocoa.500",
+        "parameter":      "magenta.700",
+        "operator":       "cocoa.500",
+        "punctuation":    "cocoa.500",
+        "tag":            "red.700",
+        "attribute":      "amber.700",
+        "regex":          "green.700"
+      },
+      "ansi": {
+        "black":         "cocoa.900",
+        "red":           "red.600",
+        "green":         "green.700",
+        "yellow":        "amber.700",
+        "blue":          "blue.700",
+        "magenta":       "magenta.700",
+        "cyan":          "cyan.700",
+        "white":         "cocoa.400",
+        "brightBlack":   "cocoa.500",
+        "brightRed":     "red.500",
+        "brightGreen":   "green.600",
+        "brightYellow":  "amber.600",
+        "brightBlue":    "blue.600",
+        "brightMagenta": "violet.600",
+        "brightCyan":    "cyan.600",
+        "brightWhite":   "cocoa.700",
+        "background":    "sand.50",
+        "foreground":    "cocoa.700",
+        "cursor":        "amber.700",
+        "selection":     "sand.300"
+      }
+    }
   },
 
   "typography": {
