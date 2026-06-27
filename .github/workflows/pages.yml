@@ -1,0 +1,71 @@
+name: Deploy site to GitHub Pages
+
+# Builds the design tokens from source, assembles the site into a publish
+# directory (landing page at the root), and deploys to GitHub Pages.
+
+on:
+  push:
+    branches:
+      - main
+      - claude/personal-site-theme-system-qz2vai
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; cancel in-progress runs for the same group.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build tokens, fonts and previews
+        run: node build/build.mjs
+
+      - name: Assemble publish directory
+        run: |
+          mkdir -p _site/dist _site/assets
+          # Site pages at the publish root.
+          cp site/index.html site/projects.html site/site.css site/theme.js _site/
+          # The pages reference ../dist/ from site/; at the root that becomes dist/.
+          sed -i 's#\.\./dist/#dist/#g' _site/index.html _site/projects.html
+          # Generated CSS the pages need. fonts.css keeps its ../assets/fonts ref,
+          # which resolves to _site/assets/fonts from _site/dist/.
+          cp dist/tokens.css dist/fonts.css _site/dist/
+          cp -r assets/fonts _site/assets/fonts
+          # Skip Jekyll processing.
+          touch _site/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
